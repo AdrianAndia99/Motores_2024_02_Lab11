@@ -6,13 +6,14 @@ public class GameController : MonoBehaviour
     [SerializeField] private ColorRandomChange colorGuess;
     [SerializeField] private Vector3 AngleRotations;
 
-    public Action OnVictory;
-    public Action OnDefeat;
+    public event Action OnVictory;
+    public event Action OnDefeat;
 
     private void Start()
     {
         colorGuess.SetRandomColor();
     }
+
     private void Update()
     {
         QuaternionRotation();
