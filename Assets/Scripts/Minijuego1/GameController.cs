@@ -6,8 +6,8 @@ public class GameController : MonoBehaviour
     [SerializeField] private ColorRandomChange colorGuess;
     [SerializeField] private Vector3 AngleRotations;
 
-    public event Action OnVictory;
-    public event Action OnDefeat;
+    public static event Action OnVictory;
+    public static event Action OnDefeat;
 
     private void Start()
     {

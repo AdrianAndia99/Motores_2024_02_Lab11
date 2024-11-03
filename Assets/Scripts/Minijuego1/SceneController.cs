@@ -3,18 +3,17 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
-    [SerializeField] private GameController colorGuessGame;
 
     private void OnEnable()
     {
-        colorGuessGame.OnVictory += LoadVictoryScene;
-        colorGuessGame.OnDefeat += LoadDefeatScene;
+        GameController.OnVictory += LoadVictoryScene;
+        GameController.OnDefeat += LoadDefeatScene;
     }
 
     private void OnDisable()
     {
-        colorGuessGame.OnVictory -= LoadVictoryScene;
-        colorGuessGame.OnDefeat -= LoadDefeatScene;
+        GameController.OnVictory -= LoadVictoryScene;
+        GameController.OnDefeat -= LoadDefeatScene;
     }
 
     private void LoadVictoryScene()
