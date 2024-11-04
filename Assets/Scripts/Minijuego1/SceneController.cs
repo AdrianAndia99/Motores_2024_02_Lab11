@@ -8,12 +8,16 @@ public class SceneController : MonoBehaviour
     {
         GameController.OnVictory += LoadVictoryScene;
         GameController.OnDefeat += LoadDefeatScene;
+
+        Ball.OnDefeat += LoadDefeatScene;
     }
 
     private void OnDisable()
     {
         GameController.OnVictory -= LoadVictoryScene;
         GameController.OnDefeat -= LoadDefeatScene;
+
+        Ball.OnDefeat -= LoadDefeatScene;
     }
 
     private void LoadVictoryScene()
